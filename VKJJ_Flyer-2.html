@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtue Kids JJJ — Flyer</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: 8.5in 11in; margin: 0; }
+
+  body {
+    width: 8.5in;
+    height: 11in;
+    font-family: 'DM Sans', sans-serif;
+    background: #FAFAF8;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* ─── TOP HERO BAND (TIE-DYE) ─── */
+  .hero {
+    background: linear-gradient(135deg, #2B5BA9 0%, #3A8D5C 33%, #F7C948 66%, #E87D3E 100%);
+    padding: 0.45in 0.55in 0.38in;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .hero-bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.08;
+    background: white;
+  }
+  .hero-bg-circle-1 { width: 3.5in; height: 3.5in; top: -1.2in; right: -0.8in; }
+  .hero-bg-circle-2 { width: 2in; height: 2in; bottom: -0.8in; left: 1in; }
+  .hero-bg-circle-3 { width: 1.5in; height: 1.5in; top: 0.1in; left: 3in; }
+
+  .free-trial-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 6px 18px;
+    border-radius: 100px;
+    margin-bottom: 0.18in;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 1;
+  }
+  .free-trial-badge span {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13pt;
+    font-weight: 800;
+    background: linear-gradient(90deg, #2B5BA9, #3A8D5C, #E87D3E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .free-trial-badge .dot {
+    width: 7px; height: 7px;
+    background: #2B5BA9;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .hero-headline {
+    font-family: 'Outfit', sans-serif;
+    font-size: 54pt;
+    font-weight: 900;
+    line-height: 0.95;
+    color: white;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+
+  .hero-headline .accent {
+    color: #FFF8E7;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  }
+
+  .hero-sub {
+    margin-top: 0.12in;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13pt;
+    color: rgba(255,255,255,0.95);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  }
+
+  /* ─── MAIN BODY ─── */
+  .body {
+    flex: 1;
+    padding: 0.3in 0.55in;
+    display: flex;
+    flex-direction: column;
+    gap: 0.22in;
+  }
+
+  /* ─── TAGLINE ─── */
+  .tagline {
+    font-family: 'Outfit', sans-serif;
+    font-size: 17pt;
+    font-weight: 700;
+    color: #2D2D2D;
+    line-height: 1.3;
+  }
+  .tagline .highlight {
+    color: #2B5BA9;
+  }
+
+  /* ─── THREE PILLARS ─── */
+  .pillars {
+    display: flex;
+    gap: 0.18in;
+  }
+
+  .pillar {
+    flex: 1;
+    border-radius: 12px;
+    padding: 0.18in 0.16in;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .pillar-blue { background: #EBF1FA; border-top: 4px solid #2B5BA9; }
+  .pillar-green { background: #EAF4EE; border-top: 4px solid #3A8D5C; }
+  .pillar-orange { background: #FDF0E8; border-top: 4px solid #E87D3E; }
+
+  .pillar-emoji { font-size: 22pt; line-height: 1; }
+
+  .pillar-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 11.5pt;
+    font-weight: 800;
+    color: #2D2D2D;
+    line-height: 1.2;
+  }
+  .pillar-blue .pillar-title { color: #2B5BA9; }
+  .pillar-green .pillar-title { color: #3A8D5C; }
+  .pillar-orange .pillar-title { color: #E87D3E; }
+
+  .pillar-desc {
+    font-size: 9.5pt;
+    color: #4B5563;
+    line-height: 1.45;
+    font-weight: 400;
+  }
+
+  /* ─── DIVIDER ─── */
+  .divider {
+    height: 1px;
+    background: #E5E7EB;
+  }
+
+  /* ─── BOTTOM ROW: SCHEDULE + CONTACT ─── */
+  .bottom-row {
+    display: flex;
+    gap: 0.25in;
+    align-items: flex-start;
+  }
+
+  /* Schedule */
+  .schedule-block { flex: 1.2; }
+
+  .block-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #9CA3AF;
+    margin-bottom: 0.1in;
+  }
+
+  .schedule-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .schedule-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-radius: 8px;
+    padding: 6px 10px;
+    border: 1px solid #F3F4F6;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .day-chip {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 9pt;
+    color: white;
+    background: linear-gradient(135deg, #2B5BA9, #3A8D5C);
+    border-radius: 6px;
+    width: 34px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .day-chip.th { background: linear-gradient(135deg, #3A8D5C, #F7C948); }
+  .day-chip.fr { background: linear-gradient(135deg, #F7C948, #E87D3E); }
+
+  .sched-info { flex: 1; }
+  .sched-class { font-weight: 700; font-size: 10pt; color: #1F2937; line-height: 1.1; }
+  .sched-time { font-size: 8.5pt; color: #6B7280; }
+  .sched-ages {
+    font-size: 8.5pt;
+    color: #9CA3AF;
+    background: #F3F4F6;
+    border-radius: 100px;
+    padding: 2px 8px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* Contact + QR */
+  .contact-block {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1in;
+  }
+
+  .phone-box {
+    background: #2D2D2D;
+    border-radius: 12px;
+    padding: 0.15in 0.18in;
+    text-align: center;
+  }
+  .phone-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 3px;
+  }
+  .phone-number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18pt;
+    font-weight: 900;
+    background: linear-gradient(90deg, #F7C948, #E87D3E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.01em;
+  }
+  .phone-note {
+    font-size: 8pt;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+  }
+
+  .qr-box {
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 0.1in;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .qr-box img {
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+  .qr-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #2D2D2D;
+    line-height: 1.2;
+  }
+  .qr-sub {
+    font-size: 8pt;
+    color: #9CA3AF;
+    line-height: 1.3;
+  }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    background: #2D2D2D;
+    padding: 0.14in 0.55in;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+
+  .footer-logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13pt;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 0.01em;
+  }
+  .footer-logo .virtue { color: #2B5BA9; }
+  .footer-logo .k { color: #EEEEEE; }
+  .footer-logo .i { color: #F7C948; }
+  .footer-logo .d { color: #E87D3E; }
+  .footer-logo .s { color: #3A8D5C; }
+
+  .footer-address {
+    font-size: 9pt;
+    color: rgba(255,255,255,0.5);
+    text-align: right;
+    line-height: 1.5;
+  }
+
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-bg-circle hero-bg-circle-1"></div>
+    <div class="hero-bg-circle hero-bg-circle-2"></div>
+    <div class="hero-bg-circle hero-bg-circle-3"></div>
+
+    <div class="free-trial-badge">
+      <div class="dot"></div>
+      <span>2 Free Classes — No Commitment</span>
+      <div class="dot"></div>
+    </div>
+
+    <div class="hero-headline">
+      YOUR KID WILL<br>
+      <span class="accent">LOVE THIS.</span>
+    </div>
+    <div class="hero-sub">Virtue Kids Jiu Jitsu &nbsp;•&nbsp; Oklahoma City &nbsp;•&nbsp; Ages 5–15</div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- TAGLINE -->
+    <div class="tagline">
+      Real Brazilian Jiu Jitsu — taught the way kids actually learn.<br>
+      <span class="highlight">Game-based. Fun-first. Genuinely effective.</span>
+    </div>
+
+    <!-- THREE PILLARS -->
+    <div class="pillars">
+      <div class="pillar pillar-blue">
+        <div class="pillar-emoji">🎮</div>
+        <div class="pillar-title">Game-Based Learning</div>
+        <div class="pillar-desc">Real BJJ skills taught through games and challenges — kids learn without realizing how hard they're working.</div>
+      </div>
+      <div class="pillar pillar-green">
+        <div class="pillar-emoji">🥋</div>
+        <div class="pillar-title">Tie-Dye Gis</div>
+        <div class="pillar-desc">Kids choose how to express themselves — right down to the gi. Tie-dye, white, or anything in between.</div>
+      </div>
+      <div class="pillar pillar-orange">
+        <div class="pillar-emoji">⭐</div>
+        <div class="pillar-title">Real Confidence</div>
+        <div class="pillar-desc">Earned confidence from mastering real skills — not participation trophies. The kind that sticks.</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SCHEDULE + CONTACT -->
+    <div class="bottom-row">
+
+      <!-- Schedule -->
+      <div class="schedule-block">
+        <div class="block-label">Class Schedule</div>
+        <div class="schedule-grid">
+          <div class="schedule-row">
+            <div class="day-chip">TU</div>
+            <div class="sched-info">
+              <div class="sched-class">Tinies</div>
+              <div class="sched-time">Tuesday · 5:15 PM</div>
+            </div>
+            <div class="sched-ages">Ages 5–8</div>
+          </div>
+          <div class="schedule-row">
+            <div class="day-chip">TU</div>
+            <div class="sched-info">
+              <div class="sched-class">Bigs</div>
+              <div class="sched-time">Tuesday · 6:15 PM</div>
+            </div>
+            <div class="sched-ages">Ages 9–15</div>
+          </div>
+          <div class="schedule-row">
+            <div class="day-chip th">TH</div>
+            <div class="sched-info">
+              <div class="sched-class">Tinies</div>
+              <div class="sched-time">Thursday · 5:15 PM</div>
+            </div>
+            <div class="sched-ages">Ages 5–8</div>
+          </div>
+          <div class="schedule-row">
+            <div class="day-chip th">TH</div>
+            <div class="sched-info">
+              <div class="sched-class">Bigs</div>
+              <div class="sched-time">Thursday · 6:15 PM</div>
+            </div>
+            <div class="sched-ages">Ages 9–15</div>
+          </div>
+          <div class="schedule-row">
+            <div class="day-chip fr">FR</div>
+            <div class="sched-info">
+              <div class="sched-class">Tinies</div>
+              <div class="sched-time">Friday · 5:15 PM</div>
+            </div>
+            <div class="sched-ages">Ages 5–8</div>
+          </div>
+          <div class="schedule-row">
+            <div class="day-chip fr">FR</div>
+            <div class="sched-info">
+              <div class="sched-class">Adults</div>
+              <div class="sched-time">Friday · 6:00 PM</div>
+            </div>
+            <div class="sched-ages">Ages 16+</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="contact-block">
+        <div class="block-label">Book Your 2 Free Classes</div>
+
+        <div class="phone-box">
+          <div class="phone-label">Call or Text</div>
+          <div class="phone-number">405-339-7338</div>
+          <div class="phone-note">Coach Brentli answers personally</div>
+        </div>
+
+        <div class="qr-box">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://virtueok.com&color=2B5BA9&bgcolor=FFFFFF&margin=4" alt="QR Code">
+          <div class="qr-text">
+            <div class="qr-title">Scan to call<br>or text us</div>
+            <div class="qr-sub">virtueok.com<br>6205 N Meridian Ave, OKC</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-logo">
+      <span class="virtue">VIRTUE </span><span class="k">K</span><span class="i">I</span><span class="d">D</span><span class="s">S</span> JIU JITSU
+    </div>
+    <div class="footer-address">
+      6205 N Meridian Ave · Oklahoma City, OK<br>
+      405-339-7338 · Text or call anytime
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
